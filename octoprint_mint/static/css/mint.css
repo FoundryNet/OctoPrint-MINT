@@ -1,0 +1,8 @@
+.mint-stat-card{background:#f8f9fa;border:1px solid #e0e0e0;border-radius:6px;padding:16px;text-align:center}
+.mint-stat-label{font-size:12px;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.mint-stat-value{font-size:22px;font-weight:bold;color:#2c3e50}
+.mint-status-card{background:#f8f9fa;border:1px solid #e0e0e0;border-radius:6px;padding:16px}
+.mint-status-card h4{margin-top:0;margin-bottom:12px}
+.mint-earning-indicator{display:inline-block;background:#e8f5e9;color:#2e7d32;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:500;margin-top:8px}
+.mint-pulse{display:inline-block;width:8px;height:8px;background:#4caf50;border-radius:50%;margin-right:6px;animation:mp 1.5s ease-in-out infinite}
+@keyframes mp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}

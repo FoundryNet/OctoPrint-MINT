@@ -1,0 +1,16 @@
+<div id="tab_plugin_mint">
+    <h2>MINT Protocol</h2>
+    <p class="muted">Your printer works. Your printer earns.</p>
+    <div class="row-fluid" style="margin-top:16px">
+        <div class="span4"><div class="mint-stat-card"><div class="mint-stat-label">Session (est.)</div><div class="mint-stat-value"><span data-bind="text: sessionEarnings().toFixed(4)">0</span> MINT</div></div></div>
+        <div class="span4"><div class="mint-stat-card"><div class="mint-stat-label">Lifetime (est.)</div><div class="mint-stat-value"><span data-bind="text: lifetimeEarnings().toFixed(4)">0</span> MINT</div></div></div>
+        <div class="span4"><div class="mint-stat-card"><div class="mint-stat-label">Jobs</div><div class="mint-stat-value"><span data-bind="text: totalJobs">0</span></div></div></div>
+    </div>
+    <div class="row-fluid" style="margin-top:16px"><div class="span12"><div class="mint-status-card"><h4>Current Print</h4>
+        <div data-bind="visible: isPrinting"><p><strong>File:</strong> <span data-bind="text: currentFile">-</span><br><strong>Elapsed:</strong> <span data-bind="text: elapsedFormatted">0:00:00</span><br><strong>Est:</strong> <span data-bind="text: estimatedEarnings().toFixed(4)">0</span> MINT</p><div class="mint-earning-indicator"><span class="mint-pulse"></span> Earning MINT...</div></div>
+        <div data-bind="visible: !isPrinting()"><p class="muted">No active print.</p></div>
+    </div></div></div>
+    <div class="row-fluid" style="margin-top:16px"><div class="span12"><h4>Recent Jobs</h4>
+        <table class="table table-condensed" data-bind="visible: recentActivity().length > 0"><thead><tr><th>File</th><th>Duration</th><th>Est.</th><th>Tx</th></tr></thead><tbody data-bind="foreach: recentActivity"><tr><td data-bind="text: filename"></td><td data-bind="text: durationFormatted"></td><td><span data-bind="text: reward.toFixed(4)"></span> MINT</td><td><a data-bind="attr:{href:tx_url}" target="_blank">Solscan</a></td></tr></tbody></table>
+    </div></div>
+</div>

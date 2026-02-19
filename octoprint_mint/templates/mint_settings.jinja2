@@ -1,0 +1,12 @@
+<div id="settings_plugin_mint">
+    <h3>MINT Protocol</h3>
+    <p class="help-block">Direct on-chain settlement. No intermediary API.</p>
+    <form class="form-horizontal">
+        <div class="control-group"><label class="control-label">Machine Keypair</label><div class="controls"><input type="text" class="input-block-level" data-bind="value: settings.plugins.mint.machine_keypair_path" placeholder="~/.foundry/octoprint_machine_keypair.json"><span class="help-inline">Auto-generated on first run</span></div></div>
+        <div class="control-group"><label class="control-label">Fee Payer Keypair</label><div class="controls"><input type="text" class="input-block-level" data-bind="value: settings.plugins.mint.fee_payer_keypair_path" placeholder="Path to Solana keypair JSON"><span class="help-inline">Needs small SOL balance for tx fees</span></div></div>
+        <div class="control-group"><label class="control-label">RPC URL</label><div class="controls"><input type="text" class="input-block-level" data-bind="value: settings.plugins.mint.rpc_url" placeholder="https://api.mainnet-beta.solana.com"></div></div>
+        <div class="control-group"><label class="control-label">Complexity</label><div class="controls"><input type="number" step="1" min="1" max="100" data-bind="value: settings.plugins.mint.complexity_default"><span class="help-inline">Default: 1</span></div></div>
+        <div class="control-group"><label class="control-label">Auto Submit</label><div class="controls"><label class="checkbox"><input type="checkbox" data-bind="checked: settings.plugins.mint.auto_settle"> Submit jobs on-chain when prints complete</label></div></div>
+        <div class="control-group"><label class="control-label">Actions</label><div class="controls"><button class="btn" data-bind="click: registerMachine">Register Machine</button> <button class="btn" data-bind="click: checkStatus">Status</button> <span data-bind="visible: mintStatusMessage, text: mintStatusMessage" class="help-inline"></span></div></div>
+    </form>
+</div>
